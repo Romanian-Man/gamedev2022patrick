@@ -20,6 +20,13 @@ For Gobal varibles Mr.Ellis perfersto use document.myVarName
 </h4> Example working code</h4>
 
 <input id="myText01"  type=text value="The dog " ><br>
+
+<input type=button value="Show Varibles" onclick="{
+   document.getElementById('myDiv01').innerHTML =
+       document.getElementById('myText01').value   
+}"><br>
+
+<div id="myDiv01">...</div>
   
  
  
