@@ -38,22 +38,34 @@ Events are HTML code that activates Javascript code
 
 <input type=text id="myText01" value="2"><br>
 
-<input type=button value="Example onChange" onChange="{
-   document.getElementById('myDiv01').innerHTML = document.getElemntById('myText01').value
-}">
-<div id="myDiv">...</div>
+<input type="button" value="Example onClick" onclick="{ 
+   document.getElementById('myDiv01').innerHTML = document.getElementById('myText01').value
+}"> 
+
+<div id="myDiv01">...</div> 
+
+
+
+
     
 <h4> Example working code</h4>
 
-<input type=button value="Example onBlue" onBlue="{
-   document.getElementById('myDiv01').innerHTML = document.getElemntById('myText01').value
-}">
-<div id="myDiv">...</div>
+<input type="button" value="Example onBlue" onblue="{ 
+   document.getElementById('myDiv01').innerHTML = document.getElementById('myText01').value
+}"> 
 
-<input type=button value="Example onFocus" onFocus="{
-   document.getElementById('myDiv01').innerHTML = document.getElemntById('myText01').value
-}">
-<div id="myDiv">...</div>
+<div id="myDiv01">...</div> 
+
+
+
+
+
+<input type="button" value="Example onFocus" onfocus="{ 
+   document.getElementById('myDiv01').innerHTML = document.getElementById('myText01').value
+}"> 
+
+<div id="myDiv01">...</div> 
+
 
 
 
