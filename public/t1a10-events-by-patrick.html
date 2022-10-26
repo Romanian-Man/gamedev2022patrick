@@ -50,7 +50,10 @@ Events are HTML code that activates Javascript code
 }">
 <div id="myDiv">...</div>
 
-
+<input type=button value="Example onFocus" onFocus="{
+   document.getElementById('myDiv01').innerHTML = document.getElemntById('myText01').value
+}">
+<div id="myDiv">...</div>
 
 
 
