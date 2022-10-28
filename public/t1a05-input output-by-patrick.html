@@ -1,66 +1,43 @@
-version 0.0.3-6
-<body>
- 
+Version 0.0.1
 
-<h2 align=center>t1a05-input output by Patrick</h2>
+<h2 align=center>t1a06-varaibles-by-Fred.html</h2>
 
-<a href="https://www.w3schools.com/jsref/prop_html_innerhtml.asp">Good refrence to input putput
-  Javascpript innerHTML value by Patrick</a>
+<a href="">You Fix: Good reference to Variables in Javascript 
+and other languages</a><br>
+
+Other Languages use: bool, int, float, char, string, 
+int_8, int_16 etc<br>
+
+Note: Javascript does use var and let for local variables.<br>
+For Global variables Mr. Ellis prefers to use document.myVarName
+
 
 <h4> Example input output code</h4>
 <pre>
-
-    let myIn01 = document.getElementbyId('myNum01').value
-    document.getElementById('myDiv01').innerHTML = myIn01 + ' squared = ' + myIn01*myIn01
+    let myIn01 = document.getElementById('myText01').value
+    document.getElementById('myDiv01').innerHTML = myIn01 
 </pre>
 
-<hr> Example working code
+<h4> Example working code</h4>
 
-<input id="myNum01" type=number value="4" ><br>
+<input id="myText01" type=text value="The dog " ><br> 
 
-<input type=button value="myEvent squares" onclick="{
-    let myIn01 = parseFloat(document.getElementById('myNum01').value)
-    let myAnswer = myIn01 * myIn01
-    document.getElementById('myDiv01').innerHTML = myIn01 + ' squared = ' + myAnswer
- }"><br>
+<input type=button value="Show Variable" onclick="{
+    let myIn01 = document.getElementById('myText01').value
+    document.getElementById('myDiv01').innerHTML = myIn01
+
+}"><br>
+
+<input type=button value="Using no variable" onclick="{
+   document.getElementById('myDiv01').innerHTML = 
+       document.getElementById('myText01').value
+}"><br>
 
 <div id="myDiv01">...</div>
 
-<style> 
-  
-body {
 
-background-color: red; 
-  
-  
-  
-  }
-  
-  input {
-    background-color: gray;
-    padding: 5px;
+
     
-    
-  }
-  
-  input:hover {
-    transform: scale(0.96);
-    transition: 0.3s all;
-    
-    
-  }
-  
-  a:hover {
-    color: white;
-    transition: 0.3s all;
-    
-  }
-  
-  
-  
-  
-  
-  
   
   
   
