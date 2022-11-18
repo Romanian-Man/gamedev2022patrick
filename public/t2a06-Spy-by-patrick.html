@@ -7,7 +7,7 @@
    myString = document.getElementById('myArea01').value.toLowerCase().split('')
    for (let myLoop=0;   myLoop < myString.length; myLoop++){
       myTemp = myString[myLoop]
-      if (myString[myLoop] == ' a') {myTemp  = 'b'} 
+      if (myString[myLoop] == 'a') {myTemp  = 'b'} 
       if (myString[myLoop] == 'b') {myTemp  = 'c'}                  
                                             
       myString[myLoop] = myTemp
@@ -20,7 +20,7 @@
 <textarea id="myArea02" rows=4 cols=70></textarea><br> 
 
 <input type=button value="decrypt" onclick="{
-   if (myString[myLoop] == ' b') {myTemp  = 'a'} 
+   if (myString[myLoop] == 'b') {myTemp  = 'a'} 
       if (myString[myLoop] == 'c') {myTemp  = 'b'} 
 }"><br><br>
 
