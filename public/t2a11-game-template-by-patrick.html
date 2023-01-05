@@ -1,6 +1,6 @@
 <h6> Version 0.0.1 </h6>
 
-<body id="myBody" style="background-repeat:repeat; background-size: 80%" background="myBackground01.jpg">
+<body id="myBody" style="background-repeat:repeat; background-size: 130%" background="myBackground01.jpg">
 
 <h1 align=center>t2a11 Game Template by Patrick
 <br><br><br><br>
@@ -33,7 +33,8 @@ function myHitOther(my1,my2){
 
 function myCheckHit(){
    if ( myHitOther('myImg01','myImg02') ){
-       alert('you lose')  
+       alert('you lose')
+       alert('next level')  
        document.getElementById('myImg01').style.left = '20px'
        location = 't2a13-keydown.html'  // go to your next level
    }
@@ -48,8 +49,8 @@ function myCheckHit(){
 
 </script>
 
-<img id="myImg01" style="position:absolute; width:100px; height:150px; top:150px; left:50px;"  src="myImage01.jpg">
-<img id="myImg02" style="position:absolute; width:100px; height:80px; top:0px; left:250px;" src="myImage02.jpg">
+<img id="myImg01" style="position:absolute; width:100px; height:80px; top:0px; left:50px;"  src="https://th.bing.com/th/id/R.2bfe71d122eefcd767a11dc406815f71?rik=Eq3EMNoSSKDcpQ&riu=http%3a%2f%2fpluspng.com%2fimg-png%2fpng-jet-plane-download-image-1792.png&ehk=byoU7468RuvpVQOG%2fa6PizpthOCvbtkxuReOC5wfk%2bo%3d&risl=&pid=ImgRaw&r=0">
+<img id="myImg02" style="position:absolute; width:100px; height:80px; top:0px; left:250px;" src="https://www.downloadclipart.net/large/12710-plane-design.png">
 
 <input type=button value="Auto Background Left" onclick="{
   clearInterval(myClock)
@@ -69,16 +70,22 @@ function myCheckHit(){
 }"><br><br>
 
 
-<input type=button value="Image Right" onclick="{
-  document.getElementById('myImage01').style.left = parseInt(document.getElementById('myImage01').style.left) + 10 + 'px'
+<input type=button value="Image Right Fast Button" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
+  document.getElementById('myImage02').style.left = parseInt(document.getElementById('myImage02').style.left) + 10 + 'px'
 }"><br><br>
 
-<img id="myImage02" style="position:relative; width:100px; height:80px; top:0px; left:0px;" src="https://pngimg.com/uploads/police_car/police_car_PNG30.png">
+
+<input type=button value="Image Left Fast Button" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
+   document.getElementById('myImage01').style.left = parseInt(document.getElementById('myImage01').style.left) + 10 + 'px'
+}"><br><br>
+  
+  
+  
   
   <style>
   body {
-background-image: url("https://ak0.picdn.net/shutterstock/videos/23424070/thumb/1.jpg");
-background-repeat: 50;
+background-image: url("https://img.freepik.com/free-vector/blank-flooded-landscape-daytime-scene_1308-60895.jpg?w=996&t=st=1672937634~exp=1672938234~hmac=684975d8c92d0c43545542981880e4d0e8e22a0072f6f0bdb9165e14d31cb2c2");
+background-repeat: 150;
 background-size: cover;
 
 
@@ -91,15 +98,13 @@ background-size: cover;
   document.getElementById('myImage01').style.left = parseInt(document.getElementById('myImage01').style.left) + 10 + 'px'
 }"><br><br>
  
- <img id="myImage02" style="position:relative; width:100px; height:80px; top:0px; left:0px;" src="https://pngimg.com/uploads/police_car/police_car_PNG30.png">
  
   
-  <img id="myImage02" style="position:relative; width:100px; height:100px; top:0px; left:0px;" src="https://clipground.com/images/no-cars-clipart-17.jpg">
   
   <style>
   body {
-background-image: url("https://ak0.picdn.net/shutterstock/videos/23424070/thumb/1.jpg");
-background-repeat: 50;
+background-image: url("https://img.freepik.com/free-vector/blank-flooded-landscape-daytime-scene_1308-60895.jpg?w=996&t=st=1672937634~exp=1672938234~hmac=684975d8c92d0c43545542981880e4d0e8e22a0072f6f0bdb9165e14d31cb2c2");
+background-repeat: 150;
 background-size: cover;
 
 
@@ -114,14 +119,13 @@ background-size: cover;
   document.getElementById('myImage03').style.left = parseInt(document.getElementById('myImage01').style.left) + 10 + 'px'
 }"><br><br>
  
- <img id="myImage03" style="position:relative; width:100px; height:100px; top:0px; left:0px;" src="https://pngimg.com/uploads/police_car/police_car_PNG30.png">
  
- <img id="myImage02" style="position:relative; width:150px; height:150px; top:0px; left:0px;" src="https://www.fotolip.com/wp-content/uploads/2016/05/Car-Clipart-6.png">
+ 
   
   <style>
   body { 
   
-background-image: url("https://ak0.picdn.net/shutterstock/videos/23424070/thumb/1.jpg");
+background-image: url("https://img.freepik.com/free-vector/blank-flooded-landscape-daytime-scene_1308-60895.jpg?w=996&t=st=1672937634~exp=1672938234~hmac=684975d8c92d0c43545542981880e4d0e8e22a0072f6f0bdb9165e14d31cb2c2");
 background-repeat: 50;
 background-size: cover;
 
