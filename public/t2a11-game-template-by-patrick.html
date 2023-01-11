@@ -1,4 +1,4 @@
-<h6> Version 0.0.1 </h6>
+h6> Version 0.0.1 </h6>
 
 <body id="myBody" style="background-repeat:repeat; background-size: 130%" background="myBackground01.jpg">
 
@@ -67,18 +67,13 @@ function myCheckHit(){
 
 
 
-<input type=button value="Passenger Plane Right Button" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
-  document.getElementById('myImg02').style.left = parseInt(document.getElementById('myImg02').style.left) + 10 + 'px'
-}"><br><br>
-
-
-<input type=button value="Jet Right Button" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
+<input type=button value="Jet Down" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
    document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + 10 + 'px'
 }"><br><br>
   
-  
-  
-    
+  <input type=button value="Jet moveRight Button" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
+    document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + 10 + 'px'
+ }"><br><br>   
   
       
   }">
@@ -230,7 +225,7 @@ background-size: cover;
         if ( myHitOther('myImg01','myImg02') ){
             //alert('WINNER')
            document.getElementById('myImg01').style.left = '20px'
-           document.all.myText01.value = 'You shot down passenger plane 745'  
+           document.all.myText01.value = 'Winner!! You shot down the passenger plane'  
            myScore += 1
         }   
       
@@ -239,7 +234,7 @@ background-size: cover;
        // you LOSE refresh the page
         if (myScore <= 0){
          document.all.myText01.value = 'YOU TOUCHED THE WATER TOO HARD'  
-         alert('FAILURE')
+         alert('You flew too low!!')
          location.reload()
         }
      
