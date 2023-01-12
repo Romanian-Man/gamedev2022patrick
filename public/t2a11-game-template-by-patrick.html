@@ -1,16 +1,19 @@
-h6> Version 0.0.1 </h6>
+<h6> Version 0.0.1 </h6>
 
-<body id="myBody" style="background-repeat:repeat; background-size: 130%" background="myBackground01.jpg">
+<body id="myBody" style="background-repeat:repeat; background-size: 80%" background="myBackground01.jpg">
 
-<h1 align=center> </h1>
+<h1 align=center>Cypertroians by Patrick</h1>
 <br><br><br><br>
 
 <script>
 
-   
+   // global variables here
+   let myGlobalX = 0
+   let myClock
+
 
    // global functions here
-function myHitOther(my1,my2){
+function myHitOther(my1,my2,my3){
    left1   = parseInt(document.getElementById(my1).style.left)
    right1  = left1 + parseInt(document.getElementById(my1).style.width)
    top1    = parseInt(document.getElementById(my1).style.top)   
@@ -30,8 +33,7 @@ function myHitOther(my1,my2){
 
 function myCheckHit(){
    if ( myHitOther('myImg01','myImg02') ){
-       alert('you lose')
-       alert('next level')  
+       alert('you lose')  
        document.getElementById('myImg01').style.left = '20px'
        location = 't2a13-keydown.html'  // go to your next level
    }
@@ -39,18 +41,20 @@ function myCheckHit(){
 
    // more if statements here like the above
 
-
+   if( myHitOther('myImg01','myImg03') ){
+       alert('you win')
+       document.getElementById('myImg01').style.left = '20px'
+       location = ''  // go to your next level
+   }
 
 }  // end of myCheckHit()
 
 
 </script>
 
-<img id="myImg01" style="position:absolute; width:150px; height:80px; top:0px; left:50px;"  src="https://th.bing.com/th/id/R.2bfe71d122eefcd767a11dc406815f71?rik=Eq3EMNoSSKDcpQ&riu=http%3a%2f%2fpluspng.com%2fimg-png%2fpng-jet-plane-download-image-1792.png&ehk=byoU7468RuvpVQOG%2fa6PizpthOCvbtkxuReOC5wfk%2bo%3d&risl=&pid=ImgRaw&r=0">
-<img id="myImg02" style="position:absolute; width:150px; height:80px; top:0px; left:250px;" src="https://www.downloadclipart.net/large/12710-plane-design.png">
-
-
-
+<img id="myImg01" style="position:absolute; width:100px; height:80px; top:0px; left:50px;"  src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/805cbd20-29a6-4816-a209-cf30ec47b960/dcjdefw-19b6f4c4-a9fa-4576-92e8-7d22cd11fb45.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzgwNWNiZDIwLTI5YTYtNDgxNi1hMjA5LWNmMzBlYzQ3Yjk2MFwvZGNqZGVmdy0xOWI2ZjRjNC1hOWZhLTQ1NzYtOTJlOC03ZDIyY2QxMWZiNDUucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.9ng_LaOLwCO7-EyZ3iZauWCPt6kjnPfMXaKoStiArDo">
+<img id="myImg02" style="position:absolute; width:100px; height:80px; top:0px; left:250px;" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/1dbc1935-6542-4ee3-822f-135cff4ba62c/derywhg-318bc942-4301-45e2-87ad-514bb015733a.png/v1/fill/w_1024,h_1199,strp/dinobot_grimlock___transparent__by_speedcam_derywhg-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTE5OSIsInBhdGgiOiJcL2ZcLzFkYmMxOTM1LTY1NDItNGVlMy04MjJmLTEzNWNmZjRiYTYyY1wvZGVyeXdoZy0zMThiYzk0Mi00MzAxLTQ1ZTItODdhZC01MTRiYjAxNTczM2EucG5nIiwid2lkdGgiOiI8PTEwMjQifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.HuLrnBuenPDhV3SytX9vUDqz3igeFTrRNHYlmL2yHJ8">
+<img id="myImg03" style="position:absolute; width:100px; height:80px; top:0px; left:500px;" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/dddb8beb-7509-4c66-bc59-5e64fc25d614/d6yotqv-c1dfe4c2-3cb4-463d-b647-01855e7c3cfd.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2RkZGI4YmViLTc1MDktNGM2Ni1iYzU5LTVlNjRmYzI1ZDYxNFwvZDZ5b3Rxdi1jMWRmZTRjMi0zY2I0LTQ2M2QtYjY0Ny0wMTg1NWU3YzNjZmQucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.UR_a0wJLiPyHww9WlGNTYi0TqdL1w010XUgHz5o3HXo">
 
 <input type=button value="Auto Background Left" onclick="{
   clearInterval(myClock)
@@ -64,279 +68,34 @@ function myCheckHit(){
 }">
 
 
+<input type=button value="Image Right Fast Button" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
+  document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + 10 + 'px'
+  myCheckHit()     // checks for all collisions
+}">
+<input type=button value="down" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
+  document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) + 10 + 'px'
+  myCheckHit()     // checks for all collisions
+}">
+<input type=button value="up" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
+  document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) + -10 + 'px'
+  myCheckHit()     // checks for all collisions
+}">
 
+<style>
+    body {
+        background-color: rgb(253, 254, 255);
+        color: #ffffff;
+    }
 
+    #myImg01 {
+        border: 5px solid rgb(118, 0, 154);
+    }
 
-<input type=button value="Jet Down" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
-   document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + 10 + 'px'
-}"><br><br>
-  
-  <input type=button value="Jet moveRight Button" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
-    document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + 10 + 'px'
- }"><br><br>   
-  
-      
-  }">
-  
-  
-  <style>
-  body {
-background-image: url("https://img.freepik.com/free-vector/blank-flooded-landscape-daytime-scene_1308-60895.jpg?w=996&t=st=1672937634~exp=1672938234~hmac=684975d8c92d0c43545542981880e4d0e8e22a0072f6f0bdb9165e14d31cb2c2");
-background-repeat: 150;
-background-size: cover;
+    #myImg02 {
+        border: 5px solid red;
+    }
 
-
-
-}
-  </style>
- 
- 
- 
- 
- 
-  
-  
-  <style>
-  body {
-background-image: url("https://img.freepik.com/free-vector/blank-flooded-landscape-daytime-scene_1308-60895.jpg?w=996&t=st=1672937634~exp=1672938234~hmac=684975d8c92d0c43545542981880e4d0e8e22a0072f6f0bdb9165e14d31cb2c2");
-background-repeat: 150;
-background-size: cover;
-
-
-
-}
-  </style>
-  
-  
- 
- 
-  
- 
- 
- 
-  
-  <style>
-  body { 
-  
-background-image: url("https://img.freepik.com/free-vector/blank-flooded-landscape-daytime-scene_1308-60895.jpg?w=996&t=st=1672937634~exp=1672938234~hmac=684975d8c92d0c43545542981880e4d0e8e22a0072f6f0bdb9165e14d31cb2c2");
-background-repeat: 50;
-background-size: cover;
-
-
-
-}
-  </style>
-  
-  
-  
-  
-  
-  
-<html>
-    <head>
-        
-        <script type="text/javascript">
-            //init object globally
-            var objImage = null;
-            function init() {
-                objImage = document.getElementById("Img01");
-                objImage.style.position = "relative";
-                objImage.style.left = "0px";
-                objImage.style.top = "0px";
-            }
-            function getKeyAndMove(e) {
-                var key_code = e.which || e.keyCode;
-                switch (key_code) {
-                    case 37: //left arrow key
-                        moveLeft(A);
-                        break;
-                    case 38: //Up arrow key
-                        moveUp(W);
-                        break;
-                    case 39: //right arrow key
-                        moveRight(D);
-                        break;
-                    case 40: //down arrow key
-                        moveDown(S);
-                        break;
-                }
-            }
-            function moveLeft() {
-                objImage.style.left = parseInt(objImage.style.left) - 5 + "px";
-            }
-            function moveUp() {
-                objImage.style.top = parseInt(objImage.style.top) - 5 + "px";
-            }
-            function moveRight() {
-                objImage.style.left = parseInt(objImage.style.left) + 5 + "px";
-            }
-            function moveDown() {
-                objImage.style.top = parseInt(objImage.style.top) + 5 + "px";
-            }
-            window.onload = init;
-        </script>
-    </head>
-
-    <body onkeydown="getKeyAndMove(event)">
-        
-
-
-
-
-      <script>
-
-        // global variables here
-     
-        let myGlobalX = 0
-        let myClock
-        let myScore = 10
-        let myGun01
-        let myGun02
-        let myShooting = 1
-     
-        // global functions here
-     function myHitOther(my1,my2){
-        left1   = parseInt(document.getElementById(my1).style.left)
-        right1  = left1 + parseInt(document.getElementById(my1).style.width)
-        top1    = parseInt(document.getElementById(my1).style.top)   
-        bottom1 = top1   + parseInt(document.getElementById(my1).style.height)
-        left2   = parseInt(document.getElementById(my2).style.left)
-        right2  = left2 + parseInt(document.getElementById(my2).style.width)
-        top2    = parseInt(document.getElementById(my2).style.top)   
-        bottom2 = top2   + parseInt(document.getElementById(my2).style.height)
-        if ((right1  >=  left2  ) &&      	   
-            (bottom1 >=  top2   ) &&
-            (left1   <=  right2 ) &&
-            (top1    <=  bottom2) ){
-            return true
-        }
-     }
-     
-     
-     function myCheckHit(){
-        document.all.myText01.value = myScore  // show the present score
-     
-        if ( myHitOther('myImg01','myImg02') ){
-           document.getElementById('myImg01').style.left = '20px'
-           document.all.myText01.value = 'You hit myImg02'  
-           myScore -= 1
-        }   
-        
-        if ( myHitOther('myImg01','myImg02') ){
-            //alert('WINNER')
-           document.getElementById('myImg01').style.left = '20px'
-           document.all.myText01.value = 'Winner!! You shot down the passenger plane'  
-           myScore += 1
-        }   
-      
-  
-        
-       // you LOSE refresh the page
-        if (myScore <= 0){
-         document.all.myText01.value = 'YOU TOUCHED THE WATER TOO HARD'  
-         alert('You flew too low!!')
-         location.reload()
-        }
-     
-        // YOU WON BOOTLEG TOPGUN!
-     
-        if ( myHitOther('myImg01','myImg02') ){
-           document.all.myText01.value = 'You hit myImg01 and you win the game!'  
-            alert('You Win, now go to the next level')
-           document.getElementById('myImg01').style.left = '20px'
-           location = 'https://youtu.be/l2hA8g1cNvQ'
-        }
-     
-        // more if statements here
-     
-     }
-     
-     
-     </script>
-     
-     
-     
-     
-     <body id="myBody" style="background-repeat:repeat; background-size: 80%" background="myBackground01.jpg"  onkeydown="{
-        document.all.myText01.value = event.key
-        if (event.key == 'd') {  // d = go right
-          document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + 10 + 'px'
-        }   
-        if (event.key == 's') {   // s = go down
-           document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) + 10 + 'px'
-        }  
-        // put more here
-       myCheckHit()     // checks for all collisions
-     }">
-     
-     
-     
-     
-     
-     
-     
-     
-     <input type=button value="Auto Background Left" onclick="{
-       clearInterval(myClock)
-       let myTemp = '100px 0px'
-       myClock = setInterval(function(){
-           myGlobalX -= 5
-           myTemp =  myGlobalX + 'px 0px'
-           document.getElementById('myBody').style.backgroundPosition = myTemp
-       }, 100)
-         
-     }">
-     
-     
-     
-     
-     <input type=button value="Down" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
-       document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) + 10 + 'px'
-       myCheckHit()     // checks for all collisions
-     }">
-     
-     
-     
-     <input type=button value="shoot" onTouchStart="{this.click(); event.preventDefault();}" onclick="{
-     if (myShooting > 2 ){myShooting = 1}
-       // Bullet Number 2
-     if (myShooting == 2){
-       myShooting += 1
-       document.getElementById('myBullet02').style.left = document.getElementById('myImg01').style.left
-       document.getElementById('myBullet02').style.top  = document.getElementById('myImg01').style.top
-       clearInterval(myGun02)
-       myGun02 = setInterval(function(){
-          document.getElementById('myBullet02').style.left = parseInt(document.getElementById('myBullet02').style.left) + 10 + 'px'
-          myCheckHit() 
-       }, 20)   // speed of bullet faster lower number
-     }
-       // Bullet Number 1
-     if (myShooting == 1){
-       myShooting += 1
-       document.getElementById('myBullet01').style.left = document.getElementById('myImg01').style.left
-       document.getElementById('myBullet01').style.top  = document.getElementById('myImg01').style.top
-       clearInterval(myGun01)
-       myGun01 = setInterval(function(){
-          document.getElementById('myBullet01').style.left = parseInt(document.getElementById('myBullet01').style.left) + 20 + 'px'
-          myCheckHit() 
-       }, 20)   // speed of bullet faster lower number
-     }
-     }"><br><br>
-     
-     
-     
-     
-     
-      
-  
-     
-     <img id="myBullet01" src="https://th.bing.com/th/id/R.2bfe71d122eefcd767a11dc406815f71?rik=Eq3EMNoSSKDcpQ&riu=http%3a%2f%2fpluspng.com%2fimg-png%2fpng-jet-plane-download-image-1792.png&ehk=byoU7468RuvpVQOG%2fa6PizpthOCvbtkxuReOC5wfk%2bo%3d&risl=&pid=ImgRaw&r=0
-     "  style="position:absolute; width:10px; height:10px; left: 130px; top:190px;">
-     <img id="myBullet02" src="myImgNew.jpg"  style="position:absolute; width:10px; height:10px; left: 150px; top:190px;">
-     
-     
-
-
-
-
-     
+    #myImg03 {
+        border: 5px solid rgb(68, 0, 255);
+    }
+</style>
